@@ -1,2 +1,6 @@
 # xi-bootcamp-mobile-ios-advanced-ui
-Repository that implements the module practice of iOS Advanced UI in KeepCoding's XI Bootcamp Mobile.
+Repositorio dedicado a la realización de la práctica del módulo de UI Avanzada iOS en el XI Bootcamp Mobile de KeepCoding.
+
+**José Sancho Monrabal**
+
+jsancho.dev@gmail.com
