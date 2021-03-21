@@ -17,6 +17,7 @@ class TopicsViewController: UIViewController {
         table.dataSource = self
         table.delegate = self
         table.register(UINib(nibName: "TopicCell", bundle: nil), forCellReuseIdentifier: "TopicCell")
+        table.register(UINib(nibName: "TopicOfTheDayCell", bundle: nil), forCellReuseIdentifier: "TopicOfTheDayCell")
         table.estimatedRowHeight = 96
         table.rowHeight = UITableView.automaticDimension
         return table
@@ -74,10 +75,6 @@ class TopicsViewController: UIViewController {
 }
 
 extension TopicsViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 96
-    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSections()
     }
@@ -87,11 +84,16 @@ extension TopicsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "TopicCell", for: indexPath) as? TopicCell,
-            let cellViewModel = viewModel.viewModel(at: indexPath) {
-            cell.viewModel = cellViewModel
-            return cell
-        }
+        if let topicCellViewModel = viewModel.viewModel(at: indexPath) as? TopicCellViewModel,
+           let cell = tableView.dequeueReusableCell(withIdentifier: "TopicCell", for: indexPath) as? TopicCell {
+                cell.viewModel = topicCellViewModel
+                return cell
+            } else if let topicOfTheDayCellViewModel = viewModel.viewModel(at: indexPath) as? TopicOfTheDayCellViewModel,
+                  let cell = tableView.dequeueReusableCell(withIdentifier: "TopicOfTheDayCell", for: indexPath) as? TopicOfTheDayCell {
+                       cell.viewModel = topicOfTheDayCellViewModel
+                       return cell
+                   }
+        
 
         fatalError()
     }

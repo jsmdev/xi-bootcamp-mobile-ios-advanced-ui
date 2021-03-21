@@ -13,7 +13,7 @@ protocol TopicCellViewModelDelegate: class {
 }
 
 /// ViewModel que representa un topic en la lista
-class TopicCellViewModel {
+class TopicCellViewModel: CellViewModel {
     let topic: Topic
     weak var delegate: TopicCellViewModelDelegate?
     var imageStringURL: String?
@@ -26,6 +26,7 @@ class TopicCellViewModel {
     
     init(topic: Topic) {
         self.topic = topic
+        super.init()
         titleText = topic.title
         postCountText = "\(topic.postsCount)"
         posterCountText = "\(topic.posters.count)"

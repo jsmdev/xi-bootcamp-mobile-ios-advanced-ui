@@ -70,6 +70,10 @@
 		62D577B7242FC76300268ADC /* UpdateUserNameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D577B6242FC76300268ADC /* UpdateUserNameResponse.swift */; };
 		90CF1B64260758BC0093EB4F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90CF1B63260758BC0093EB4F /* Colors.xcassets */; };
 		90CF1B672607592F0093EB4F /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF1B662607592F0093EB4F /* UIColor+Additions.swift */; };
+		90CF1B6F260800C60093EB4F /* TopicOfTheDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF1B6D260800C60093EB4F /* TopicOfTheDayCell.swift */; };
+		90CF1B70260800C60093EB4F /* TopicOfTheDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90CF1B6E260800C60093EB4F /* TopicOfTheDayCell.xib */; };
+		90CF1B73260800E70093EB4F /* TopicOfTheDayCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF1B72260800E70093EB4F /* TopicOfTheDayCellViewModel.swift */; };
+		90CF1B76260801770093EB4F /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF1B75260801770093EB4F /* CellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +142,10 @@
 		62D577B6242FC76300268ADC /* UpdateUserNameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserNameResponse.swift; sourceTree = "<group>"; };
 		90CF1B63260758BC0093EB4F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		90CF1B662607592F0093EB4F /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		90CF1B6D260800C60093EB4F /* TopicOfTheDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicOfTheDayCell.swift; sourceTree = "<group>"; };
+		90CF1B6E260800C60093EB4F /* TopicOfTheDayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicOfTheDayCell.xib; sourceTree = "<group>"; };
+		90CF1B72260800E70093EB4F /* TopicOfTheDayCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicOfTheDayCellViewModel.swift; sourceTree = "<group>"; };
+		90CF1B75260801770093EB4F /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +285,10 @@
 				62015CB623EF04C200673EBB /* TopicCellViewModel.swift */,
 				62015CB823EF084C00673EBB /* TopicCell.swift */,
 				62015CB923EF084C00673EBB /* TopicCell.xib */,
+				90CF1B72260800E70093EB4F /* TopicOfTheDayCellViewModel.swift */,
+				90CF1B6D260800C60093EB4F /* TopicOfTheDayCell.swift */,
+				90CF1B6E260800C60093EB4F /* TopicOfTheDayCell.xib */,
+				90CF1B75260801770093EB4F /* CellViewModel.swift */,
 			);
 			path = Topics;
 			sourceTree = "<group>";
@@ -414,6 +426,7 @@
 				90CF1B64260758BC0093EB4F /* Colors.xcassets in Resources */,
 				626F76DF242FA491006610C8 /* CategoryCell.xib in Resources */,
 				626F76F1242FACBC006610C8 /* UserCell.xib in Resources */,
+				90CF1B70260800C60093EB4F /* TopicOfTheDayCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,10 +442,12 @@
 				626F7706242FBB2B006610C8 /* UserDataManager.swift in Sources */,
 				626F76DE242FA491006610C8 /* CategoryCell.swift in Sources */,
 				626F76D7242FA313006610C8 /* CategoryCellViewModel.swift in Sources */,
+				90CF1B6F260800C60093EB4F /* TopicOfTheDayCell.swift in Sources */,
 				90CF1B672607592F0093EB4F /* UIColor+Additions.swift in Sources */,
 				626F76E5242FA673006610C8 /* CategoriesRequest.swift in Sources */,
 				626F76ED242FAC86006610C8 /* UserCellViewModel.swift in Sources */,
 				627DC5BE23E5F7A0006D8615 /* Coordinator.swift in Sources */,
+				90CF1B76260801770093EB4F /* CellViewModel.swift in Sources */,
 				627DC5C323E5FEE4006D8615 /* TopicsViewModel.swift in Sources */,
 				62D577B7242FC76300268ADC /* UpdateUserNameResponse.swift in Sources */,
 				62015CC023EF0F8100673EBB /* TopicDetailViewModel.swift in Sources */,
@@ -457,6 +472,7 @@
 				62015CDF23EF30E600673EBB /* CategoriesCoordinator.swift in Sources */,
 				62015CD223EF205100673EBB /* CreateTopicRequest.swift in Sources */,
 				62015CC223EF0FA000673EBB /* TopicDetailViewController.swift in Sources */,
+				90CF1B73260800E70093EB4F /* TopicOfTheDayCellViewModel.swift in Sources */,
 				626F76F3242FACE4006610C8 /* UsersDataManager.swift in Sources */,
 				62015CDD23EF302900673EBB /* CategoriesViewController.swift in Sources */,
 				627DC5C823E60384006D8615 /* TopicsDataManager.swift in Sources */,

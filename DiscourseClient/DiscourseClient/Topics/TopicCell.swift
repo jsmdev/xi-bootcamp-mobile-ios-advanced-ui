@@ -31,7 +31,7 @@ class TopicCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         if let width = userImageView?.bounds.width {
-            userImageView?.layer.cornerRadius =  width / 2
+            userImageView?.layer.cornerRadius = width / 2
         }
         userImageView?.layer.borderWidth = 1
         userImageView?.layer.borderColor = UIColor.lightGray.cgColor

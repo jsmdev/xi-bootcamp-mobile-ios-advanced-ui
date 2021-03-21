@@ -22,6 +22,7 @@
                         <rect key="frame" x="16" y="16" width="64" height="64"/>
                         <color key="backgroundColor" name="fondoClaro"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="64" id="VdS-7K-l32"/>
                             <constraint firstAttribute="width" secondItem="3bH-ot-6I1" secondAttribute="height" multiplier="1:1" id="cyq-pu-d9p"/>
                         </constraints>
                     </imageView>

@@ -25,7 +25,7 @@ class TopicsViewModel {
     weak var coordinatorDelegate: TopicsCoordinatorDelegate?
     weak var viewDelegate: TopicsViewDelegate?
     let topicsDataManager: TopicsDataManager
-    var topicViewModels: [TopicCellViewModel] = []
+    var topicViewModels: [CellViewModel] = []
 
     init(topicsDataManager: TopicsDataManager) {
         self.topicsDataManager = topicsDataManager
@@ -38,6 +38,7 @@ class TopicsViewModel {
                 guard let response = response else { return }
 
                 self?.topicViewModels = response.topicList.topics.map({ TopicCellViewModel(topic: $0) })
+                self?.topicViewModels.insert(TopicOfTheDayCellViewModel(), at: 0)
                 self?.viewDelegate?.topicsFetched()
             case .failure:
                 self?.viewDelegate?.errorFetchingTopics()
@@ -57,14 +58,16 @@ class TopicsViewModel {
         return topicViewModels.count
     }
 
-    func viewModel(at indexPath: IndexPath) -> TopicCellViewModel? {
+    func viewModel(at indexPath: IndexPath) -> CellViewModel? {
         guard indexPath.row < topicViewModels.count else { return nil }
         return topicViewModels[indexPath.row]
     }
 
     func didSelectRow(at indexPath: IndexPath) {
         guard indexPath.row < topicViewModels.count else { return }
-        coordinatorDelegate?.didSelect(topic: topicViewModels[indexPath.row].topic)
+        if let topicCellViewModel = topicViewModels[indexPath.row] as? TopicCellViewModel {
+            coordinatorDelegate?.didSelect(topic: topicCellViewModel.topic)
+        }
     }
 
     func plusButtonTapped() {
