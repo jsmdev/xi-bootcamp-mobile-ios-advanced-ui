@@ -22,6 +22,14 @@ class TopicsViewController: UIViewController {
         return table
     }()
 
+    lazy var addTopicButton: UIButton = {
+        let button = UIButton(frame: CGRect(origin: .zero, size: CGSize(width: 64, height: 64)))
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setBackgroundImage(UIImage(named: "icoNew"), for: .normal)
+        button.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     let viewModel: TopicsViewModel
 
     init(viewModel: TopicsViewModel) {
@@ -32,22 +40,22 @@ class TopicsViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func loadView() {
         view = UIView()
 
         view.addSubview(tableView)
+        view.addSubview(addTopicButton)
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            addTopicButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            addTopicButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            addTopicButton.widthAnchor.constraint(equalToConstant: 64),
+            addTopicButton.heightAnchor.constraint(equalToConstant: 64)
         ])
-
-
-        let rightBarButtonItem: UIBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusButtonTapped))
-        rightBarButtonItem.tintColor = .black
-        navigationItem.rightBarButtonItem = rightBarButtonItem
     }
 
     override func viewDidLoad() {
