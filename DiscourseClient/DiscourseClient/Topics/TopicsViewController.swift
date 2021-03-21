@@ -17,7 +17,7 @@ class TopicsViewController: UIViewController {
         table.dataSource = self
         table.delegate = self
         table.register(UINib(nibName: "TopicCell", bundle: nil), forCellReuseIdentifier: "TopicCell")
-        table.estimatedRowHeight = 100
+        table.estimatedRowHeight = 96
         table.rowHeight = UITableView.automaticDimension
         return table
     }()
@@ -66,6 +66,10 @@ class TopicsViewController: UIViewController {
 }
 
 extension TopicsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 96
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSections()
     }
