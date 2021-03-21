@@ -68,6 +68,8 @@
 		62A697A823E89E6700CCEA3E /* DiscourseClientLocalDataManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A697A723E89E6700CCEA3E /* DiscourseClientLocalDataManagerImpl.swift */; };
 		62D577B5242FC6EC00268ADC /* UpdateUserNameRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D577B4242FC6EC00268ADC /* UpdateUserNameRequest.swift */; };
 		62D577B7242FC76300268ADC /* UpdateUserNameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D577B6242FC76300268ADC /* UpdateUserNameResponse.swift */; };
+		90CF1B64260758BC0093EB4F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90CF1B63260758BC0093EB4F /* Colors.xcassets */; };
+		90CF1B672607592F0093EB4F /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CF1B662607592F0093EB4F /* UIColor+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +136,8 @@
 		62A697A723E89E6700CCEA3E /* DiscourseClientLocalDataManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscourseClientLocalDataManagerImpl.swift; sourceTree = "<group>"; };
 		62D577B4242FC6EC00268ADC /* UpdateUserNameRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserNameRequest.swift; sourceTree = "<group>"; };
 		62D577B6242FC76300268ADC /* UpdateUserNameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserNameResponse.swift; sourceTree = "<group>"; };
+		90CF1B63260758BC0093EB4F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		90CF1B662607592F0093EB4F /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				62015CCA23EF19F500673EBB /* UIViewController+Extensions.swift */,
+				90CF1B662607592F0093EB4F /* UIColor+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				627DC5A823E5F580006D8615 /* AppDelegate.swift */,
 				627DC5AA23E5F580006D8615 /* SceneDelegate.swift */,
 				627DC5B123E5F581006D8615 /* Assets.xcassets */,
+				90CF1B63260758BC0093EB4F /* Colors.xcassets */,
 				627DC5B323E5F581006D8615 /* LaunchScreen.storyboard */,
 				627DC5B623E5F581006D8615 /* Info.plist */,
 			);
@@ -405,6 +411,7 @@
 				627DC5B523E5F581006D8615 /* LaunchScreen.storyboard in Resources */,
 				627DC5B223E5F581006D8615 /* Assets.xcassets in Resources */,
 				62015CBB23EF084C00673EBB /* TopicCell.xib in Resources */,
+				90CF1B64260758BC0093EB4F /* Colors.xcassets in Resources */,
 				626F76DF242FA491006610C8 /* CategoryCell.xib in Resources */,
 				626F76F1242FACBC006610C8 /* UserCell.xib in Resources */,
 			);
@@ -422,6 +429,7 @@
 				626F7706242FBB2B006610C8 /* UserDataManager.swift in Sources */,
 				626F76DE242FA491006610C8 /* CategoryCell.swift in Sources */,
 				626F76D7242FA313006610C8 /* CategoryCellViewModel.swift in Sources */,
+				90CF1B672607592F0093EB4F /* UIColor+Additions.swift in Sources */,
 				626F76E5242FA673006610C8 /* CategoriesRequest.swift in Sources */,
 				626F76ED242FAC86006610C8 /* UserCellViewModel.swift in Sources */,
 				627DC5BE23E5F7A0006D8615 /* Coordinator.swift in Sources */,
