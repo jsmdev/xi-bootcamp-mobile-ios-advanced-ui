@@ -29,9 +29,23 @@ class TopicCellViewModel {
         titleText = topic.title
         postCountText = "\(topic.postsCount)"
         posterCountText = "\(topic.posters.count)"
-        dateText = topic.lastPostedAt
+        dateText = formatDate()
         userImageURL = formatAvatarURL()
         getPhotoImage(with: userImageURL)
+    }
+    
+    private func formatDate() -> String {
+        let inputStringDate = topic.lastPostedAt
+        let inputFormat = "YYYY-MM-dd'T'HH:mm:ss.SSSZ"
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_GB")
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        dateFormatter.dateFormat = inputFormat
+        guard let date = dateFormatter.date(from: inputStringDate) else { return  inputStringDate }
+        let outputFormat = "MMM yyyy"
+        dateFormatter.dateFormat = outputFormat
+        let outputStringDate = dateFormatter.string(from: date)
+        return outputStringDate
     }
     
     private func formatAvatarURL() -> String {
