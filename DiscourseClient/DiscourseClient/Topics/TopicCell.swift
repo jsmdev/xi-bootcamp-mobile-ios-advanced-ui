@@ -10,6 +10,12 @@ import UIKit
 
 /// Celda que representa un topic en la lista
 class TopicCell: UITableViewCell {
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var postCountLabel: UILabel!
+    @IBOutlet weak var posterCount: UILabel!
+    @IBOutlet weak var lastPostDateLabel: UILabel!
+    
     var viewModel: TopicCellViewModel? {
         didSet {
             guard let viewModel = viewModel else { return }
