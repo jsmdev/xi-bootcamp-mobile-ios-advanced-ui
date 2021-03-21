@@ -61,6 +61,7 @@ class TopicsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         viewModel.viewWasLoaded()
     }
 

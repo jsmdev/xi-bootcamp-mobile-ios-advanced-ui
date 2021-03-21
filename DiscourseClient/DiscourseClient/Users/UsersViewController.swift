@@ -46,6 +46,7 @@ class UsersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
         viewModel.viewWasLoaded()
     }
 
